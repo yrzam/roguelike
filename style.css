@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 15px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Roboto";
+}
+
+h1 {
+  font-family: "Playfair Display";
+  font-size: 30px;
+  padding: 10px 0;
+  margin: 0px;
+}
+
+#field-box {
+  border: 2px solid #d0d0d0;
+  float: left;
+}
+
+#field {
+  position: relative;
+}
+
+#field>* {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  z-index: 5;
+}
+
+#field .tile {
+  background-image: url(images/tile-.png);
+}
+
+#field .tileW {
+  background-image: url(images/tile-W.png);
+}
+
+#field .tileE {
+  transition: 0.25s linear all;
+  background-image: url(images/tile-E.png);
+  z-index: 10;
+}
+
+#field .tileP {
+  transition: 0.25s linear all;
+  background-image: url(images/tile-P.png);
+  z-index: 10;
+}
+
+.tileHP {
+  background-image: url(images/tile-HP.png);
+  z-index: 9;
+}
+
+.tileSW {
+  background-image: url(images/tile-SW.png);
+  z-index: 9;
+}
+
+#field .health {
+  transition: 0.15s linear all;
+  z-index: 11;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 3px;
+}
+
+#field .tileE .health {
+  background-color: #ff0000;
+}
+
+#field .tileP .health {
+  background-color: #00ff00;
+}
+
+#inventory-box {
+  border: 2px solid #d0d0d0;
+  float: left;
+}
+
+#inventory {
+  position: relative;
+  width: 800px;
+  min-height: 65px;
+}
+
+#inventory>* {
+  display: inline-block;
+  padding: 4px 10px;
+}
+
+#inventory .img {
+  background-size: 100%;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+#inventory .invnum {
+  font-size: 22px;
+  text-align: center;
+}
+
+.cl {
+  clear: both;
+  display: block;
+}
